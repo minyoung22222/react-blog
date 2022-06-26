@@ -7,6 +7,7 @@ import Header from './components/Header'
 import Homepage from './pages/Homepage';
 import Footer from './components/Footer'
 import { useEffect, useState } from 'react';
+import Postview from './pages/Postview';
 
 const ResetStyle = createGlobalStyle`
 	${reset}
@@ -36,6 +37,9 @@ function App() {
 			<Switch>
 				<Route path='/' exact>
 					<Homepage />
+				</Route>
+				<Route path='/postview' component={Postview}>
+					
 				</Route>
 			</Switch>
 			<Footer />

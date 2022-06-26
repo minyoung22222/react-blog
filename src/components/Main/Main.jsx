@@ -45,8 +45,8 @@ export default function Main() {
 			<StyledA11yHidden>Post</StyledA11yHidden>
 			<StyledPosts>
 				<Post />
-				<About />
 			</StyledPosts>
+			<About />
 		</StyledMaxWidth>
 	</main>
   )

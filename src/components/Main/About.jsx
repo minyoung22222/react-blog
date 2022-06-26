@@ -93,7 +93,7 @@ export default function About() {
   return (
     <StyledAbout>
         <StyledH2>About Me</StyledH2>
-        <StyledUserProfile src={require('../../assets/profile.jpg').default} />
+        <StyledUserProfile src={require('../../assets/profile.jpg')} />
         <StyledUserName>Chilli</StyledUserName>
         <StyledUserDescription>Lorem ipsum dolor sit amet consectetur adipisicing elit.</StyledUserDescription>
         <StyledH3>Categories</StyledH3>
@@ -110,22 +110,22 @@ export default function About() {
         <StyledSns>
             <li>
                 <StyledSnsA href="#">
-                    <StyledSnsImg src="./assets/Facebook.svg" alt="Facebook" />
+                    <StyledSnsImg src={require('../../assets/Facebook.svg').default} alt="Facebook" />
                 </StyledSnsA>
             </li>
             <li>
-                <a href="#">
-                    <StyledSnsImg src="./assets/Twitter.svg" alt="Twitter" />
+                <a href="!#">
+                    <StyledSnsImg src={require('../../assets/Twitter.svg').default}alt="Twitter" />
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <StyledSnsImg src="./assets/Instagram.svg" alt="Instagram" />
+                <a href="!#">
+                    <StyledSnsImg src={require('../../assets/Instagram.svg').default} alt="Instagram" />
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <StyledSnsImg src="./assets/Github.svg" alt="GitHub" />
+                <a href="!#">
+                    <StyledSnsImg src={require('../../assets/Github.svg').default} alt="GitHub" />
                 </a>
             </li>
         </StyledSns>

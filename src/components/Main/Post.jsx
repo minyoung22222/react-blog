@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Category from './Category'
@@ -51,28 +51,62 @@ const StyledPostDescription = styled.p`
 	}
 `
 
-export default function post() {
-  return (
-    <li>
-        <StyledPost to="post-view.html">
-            <article>
-                <StyledArticleImg src="./images/post-img6.jpg" alt="" />
-                <Category/>
-                <StyledContentsWrap>
-                    <StyledH3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</StyledH3>
-                <Author />
-                    <StyledPostDescription>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore illum nostrum perferendis voluptas, voluptate soluta corrupti dolore quidem. Placeat, eaque! Exercitationem est
-                        facilis dolor quas odio cum incidunt repudiandae vel. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore illum nostrum perferendis voluptas, voluptate soluta
-                        corrupti dolore quidem. Placeat, eaque! Exercitationem est facilis dolor quas odio cum incidunt repudiandae vel. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
-                        illum nostrum perferendis voluptas, voluptate soluta corrupti dolore quidem. Placeat, eaque! Exercitationem est facilis dolor quas odio cum incidunt repudiandae vel. Lorem ipsum
-                        dolor sit amet consectetur, adipisicing elit. Inventore illum nostrum perferendis voluptas, voluptate soluta corrupti dolore quidem. Placeat, eaque! Exercitationem est facilis
-                        dolor quas odio cum incidunt repudiandae vel."
-                    </StyledPostDescription>
-                </StyledContentsWrap>
-            </article>
-            
-        </StyledPost>
-    </li>
-  )
+
+export default function Post() {
+    const [postObj, setPostObj] = useState({});
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        async function getData() {
+            const res = await fetch('/data.json');
+            const data = await res.json();
+            setPostObj(data.posts);
+            setIsLoaded(true);
+        }
+        getData();
+    }, []);
+
+    if (isLoaded) {
+        console.log({postObj})
+        return (
+            <>
+                {postObj.map(item => (
+                    <li key={item.id}>
+                        <StyledPost to="postview">
+                            <article>
+                                <StyledArticleImg src={item.thumbnail} alt="" />
+                                <Category/>
+                                <StyledContentsWrap>
+                                    <StyledH3>
+                                        {item.title}
+                                    </StyledH3>
+                                <Author />
+                                    <StyledPostDescription>
+                                        {item.contents.text}
+                                    </StyledPostDescription>
+                                </StyledContentsWrap>
+                            </article>                     
+                        </StyledPost>
+                    </li>
+                ))}
+            </>
+        )
+    }
 }
+
+
+{/* <li key={post.id}>
+                    <StyledPost to="postview">
+                        <article>
+                            <StyledArticleImg src="./images/post-img6.jpg" alt="" />
+                            <Category/>
+                            <StyledContentsWrap>
+                                <StyledH3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</StyledH3>
+                            <Author />
+                                <StyledPostDescription>
+                                    {post.contents.text}
+                                </StyledPostDescription>
+                            </StyledContentsWrap>
+                        </article>                     
+                    </StyledPost>
+                </li> */}
