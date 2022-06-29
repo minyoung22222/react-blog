@@ -21,6 +21,9 @@ const StyledImg = styled.img`
 `
 
 const StyledCreated = styled.dd`
+    display: flex;
+	align-items: center;
+	gap: 0.6rem;
     &::before {
         content: "";
         display: block;
@@ -48,9 +51,7 @@ export default function Author() {
         <StyledA11yHidden>Author</StyledA11yHidden>
         <StyledDd><StyledImg src={require('../../assets/profile.jpg')} /> Chilli</StyledDd>
         <StyledA11yHidden>Created</StyledA11yHidden>
-        <StyledDd>
-            <StyledCreated>2022.05.25</StyledCreated>
-        </StyledDd>
+        <StyledCreated>2022.05.25</StyledCreated>
     </StyledAuthorWrap>
   )
 }

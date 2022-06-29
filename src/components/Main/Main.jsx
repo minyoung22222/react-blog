@@ -11,6 +11,9 @@ const StyledMaxWidth = styled.div`
 	width: 1224px;
 	max-width: calc(100% - 4rem);
 	margin: 0 auto;
+	@media (max-width: 1024px) {
+		flex-direction: column;
+	}
 `
 
 const StyledA11yHidden = styled.h2 `

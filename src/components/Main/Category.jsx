@@ -15,7 +15,7 @@ const StyledDd = styled.dd`
 	font-size: 1.2rem;
 `
 
-const StyledA11yHidden = styled.dt `
+const StyledA11yHidden = styled.dt`
     overflow: hidden;
 	position: absolute;
 	clip: rect(0, 0, 0, 0);

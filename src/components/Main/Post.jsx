@@ -75,15 +75,15 @@ export default function Post() {
                         <StyledPost to="postview">
                             <article>
                                 <StyledArticleImg src={item.thumbnail} alt="" />
-                                <Category/>
                                 <StyledContentsWrap>
+                                    <Category/>
                                     <StyledH3>
                                         {item.title}
                                     </StyledH3>
-                                <Author />
-                                    <StyledPostDescription>
-                                        {item.contents.text}
-                                    </StyledPostDescription>
+                                    <Author />
+                                        <StyledPostDescription>
+                                            {item.contents.text}
+                                        </StyledPostDescription>
                                 </StyledContentsWrap>
                             </article>                     
                         </StyledPost>

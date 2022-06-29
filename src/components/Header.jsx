@@ -50,14 +50,19 @@ const HeaderProfile = styled.img`
 	object-fit: cover;
 `
 
-const StyledA = styled(Link)`
+const StyledWriteButton = styled.button`
+    padding: 0.2rem 0.8em 0;
+    background: var(--main-color);
+    color: var(--white-color);
     @media (max-width: 640px) {
         width: 4.4rem;
 		height: 4.4rem;
 		padding: 0;
 		border-radius: 50%;
     }
+
 `
+
 const StyledButton = styled.button`
     padding: 0.2rem 0.8em 0;
 	background: var(--white-color);
@@ -109,10 +114,10 @@ export default function Header() {
                         </HeaderProfileLink>
                     </li>
                     <li>
-                        <StyledA to='#'>
+                        <StyledWriteButton to='#'>
                             <HeaderModify src={require('../assets/icon-modify-white.svg').default}/>
                             <StyledButtonSpan>Write</StyledButtonSpan>
-                        </StyledA>
+                        </StyledWriteButton>
                     </li>
                     <li>
                         <StyledButton>

@@ -114,19 +114,19 @@ export default function About() {
                 </StyledSnsA>
             </li>
             <li>
-                <a href="!#">
+                <StyledSnsA href="!#">
                     <StyledSnsImg src={require('../../assets/Twitter.svg').default}alt="Twitter" />
-                </a>
+                </StyledSnsA>
             </li>
             <li>
-                <a href="!#">
+                <StyledSnsA href="!#">
                     <StyledSnsImg src={require('../../assets/Instagram.svg').default} alt="Instagram" />
-                </a>
+                </StyledSnsA>
             </li>
             <li>
-                <a href="!#">
+                <StyledSnsA href="!#">
                     <StyledSnsImg src={require('../../assets/Github.svg').default} alt="GitHub" />
-                </a>
+                </StyledSnsA>
             </li>
         </StyledSns>
     </StyledAbout>
