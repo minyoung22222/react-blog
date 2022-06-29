@@ -49,7 +49,7 @@ export default function Author() {
   return (
     <StyledAuthorWrap>
         <StyledA11yHidden>Author</StyledA11yHidden>
-        <StyledDd><StyledImg src={require('../../assets/profile.jpg')} /> Chilli</StyledDd>
+        <StyledDd><StyledImg src={require('../../assets/profile.jpg')} alt="profile image"/> Chilli</StyledDd>
         <StyledA11yHidden>Created</StyledA11yHidden>
         <StyledCreated>2022.05.25</StyledCreated>
     </StyledAuthorWrap>
