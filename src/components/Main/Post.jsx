@@ -67,7 +67,7 @@ export default function Post() {
     }, []);
 
     if (isLoaded) {
-        console.log({postObj})
+        console.log(postObj)
         return (
             <>
                 {postObj.map(item => (
@@ -82,7 +82,7 @@ export default function Post() {
                                     </StyledH3>
                                     <Author />
                                         <StyledPostDescription>
-                                            {item.contents.text}
+                                            {item['contents'][0].text}
                                         </StyledPostDescription>
                                 </StyledContentsWrap>
                             </article>                     
