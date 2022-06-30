@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import reset from 'styled-reset';
 import GlobalStyle from './style/global';
-import ButtonStyle from './style/button';
 import Header from './components/Header'
 import Homepage from './pages/Homepage';
 import Footer from './components/Footer'
@@ -32,7 +31,6 @@ function App() {
 		<BrowserRouter>
 			<ResetStyle/>
 			<GlobalStyle />
-			<ButtonStyle />
 			<Header />
 			<Switch>
 				<Route path='/' exact>

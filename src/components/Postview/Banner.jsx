@@ -46,6 +46,7 @@ const StyledBannercontents = styled.div`
 `
 
 const StyledToday = styled.p`
+	position: relative;
 	padding-left: 0.8em;
 	font-size: 5rem;
 	font-weight: bold;

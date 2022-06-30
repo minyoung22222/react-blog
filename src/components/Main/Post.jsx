@@ -45,6 +45,11 @@ const StyledPostDescription = styled.p`
 	font-size: 1.4rem;
 	-webkit-line-clamp: 3;
 	text-indent: 0.5em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
     @media (max-width: 540px) {
 		height: auto;
 		-webkit-line-clamp: 2;

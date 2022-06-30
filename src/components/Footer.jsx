@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import ArrowTopImg from  "../assets/ArrowTop.svg"
+
 const StyledFooter = styled.div`
     background: var(--white-color);
 	margin-top: 10rem;
@@ -30,7 +32,7 @@ const StyledTopbutton = styled.button`
 	padding-top: 2.2rem;
 	border: 0;
 	border-radius: var(--border-radius) var(--border-radius) 0 0;
-	background: var(--main-color) url(../assets/ArrowTop.svg) no-repeat 50% 0.4rem / 4rem;
+	background: var(--main-color) url(${ArrowTopImg}) no-repeat 50% 0.4rem / 4rem;
 	color: var(--white-color);
 	text-align: center;
 	font-weight: bold;
