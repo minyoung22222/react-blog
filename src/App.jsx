@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import reset from 'styled-reset';
 import GlobalStyle from './style/global';
+import GlobalResetStyle from './style/reset'
 import Header from './components/Header'
 import Homepage from './pages/Homepage';
 import Footer from './components/Footer'
@@ -13,7 +14,7 @@ const ResetStyle = createGlobalStyle`
 `
 
 
-function App() {
+export default function App() {
 	const [data, setData] = useState([]);
   	useEffect(() => {
 		const fetchData = () => {
@@ -30,15 +31,14 @@ function App() {
 		<>
 		<BrowserRouter>
 			<ResetStyle/>
+			<GlobalResetStyle />
 			<GlobalStyle />
 			<Header />
 			<Switch>
 				<Route path='/' exact>
 					<Homepage />
 				</Route>
-				<Route path='/postview' component={Postview}>
-					
-				</Route>
+				<Route path='/postview' component={Postview} />
 			</Switch>
 			<Footer />
 		</BrowserRouter>
@@ -47,4 +47,4 @@ function App() {
 
 }
 
-export default App;
+// export default App;
