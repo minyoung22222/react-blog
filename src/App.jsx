@@ -14,7 +14,7 @@ const ResetStyle = createGlobalStyle`
 `
 
 
-export default function App() {
+function App() {
 	const [data, setData] = useState([]);
   	useEffect(() => {
 		const fetchData = () => {
@@ -30,7 +30,7 @@ export default function App() {
 	return (
 		<>
 		<BrowserRouter>
-			<ResetStyle/>
+			{/* <ResetStyle/> */}
 			<GlobalResetStyle />
 			<GlobalStyle />
 			<Header />
@@ -47,4 +47,4 @@ export default function App() {
 
 }
 
-// export default App;
+export default App;
